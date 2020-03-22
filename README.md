@@ -25,17 +25,21 @@ cd assessment3/environments/demo
 * Fill in the required values in file "assessment3/environments/demo/vars.tf"
 ```
 variable "acm_arn" {
-  default = "acm_arn=arn:aws:acm:us-east-1:XXXXXXXXXXXXX:certificate/XXXXXXXXXXXXXXXXXXXXXXXX"
+  default = "arn:aws:acm:us-east-1:XXXXXXXXXXXXX:certificate/XXXXXXXXXXXXXXXXXXXXXXXX"
 }
 
 variable "region" {
   default = "eu-west-1"
 }
 ```
+* Initialize terraform
+```
+terraform init
+```
 
 * Import ACM certificate state
 ```
-terraform import aws_acm_certificate.cert var.acm_arn
+terraform import aws_acm_certificate.cert arn:aws:acm:us-east-1:XXXXXXXXXXXXX:certificate/XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 * Dry run

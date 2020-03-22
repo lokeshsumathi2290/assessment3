@@ -1,1 +1,2 @@
 environments/*/.terraform/*
+environments/*/terraform.*
