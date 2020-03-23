@@ -5,6 +5,7 @@ Terraform module to distribute static content
 These instructions will help you create all required resources in AWS for distribution of static contents.
 
 ### Prerequisites
+* Terraform version v0.12.23 or above
 * AWS ACM certificate ARN
     * The domain name in this cert will be used to create the hosted zone and will be pointed to Cloudfront distribution
     * The domain name will be added as alias to Cloudfront distribution
